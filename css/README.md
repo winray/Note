@@ -274,10 +274,11 @@ h4 {letter-spacing: 20px}
 - outline-width：轮廓宽度
 
 ######CSS框模型
-CSS 框模型 (Box Model) 规定了元素框处理元素内容、 内边距、 边框 和 外边距的方式。
-<br/>
-**CSS框模型概述**
-![CSS框模型概述](./img/1.gif)
+- CSS 框模型 (Box Model) 规定了元素框处理元素内容、 内边距、 边框 和 外边距的方式。
+- **CSS框模型概述**
+
+ ![CSS框模型概述](./img/1.gif)
+
 
 
 
