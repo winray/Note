@@ -279,6 +279,56 @@ h4 {letter-spacing: 20px}
 
  ![CSS框模型概述](./img/1.gif)
 
+- 许多元素将由用户代理样式表设置外边距和内边距。 可以通过将元素的 margin 和 padding 设置为零来覆盖这些浏览器样式。
+
+ ```bash
+ * {
+     margin: 0;
+	 padding: 0;
+ }
+ ```
+
+- CSS内边距
+ - CSS padding属性
+
+ ```bash
+ h1 {padding: 10px;}
+ ```
+
+ - 按照上、 右、 下、 左的顺序分别设置
+
+ ```bash
+ h1 {padding: 1px 1px 1px 1px;}
+ ```
+
+ - 单边内边距属性
+   - padding-top
+   - padding-right
+   - padding-bottom
+   - padding-left
+
+ - 百分数值是相对于其父元素的width计算的。
+
+######CSS边框
+- border，有三方面，宽度，样式，以及颜色
+- border-style：
+
+ ```bash
+ p.aside {border-style: solid dotted dashed double;}
+ ```
+
+- 单边样式
+ - border-top-style
+ - border-right-style
+ - border-bottom-style
+ - border-left-style
+
+- border-width 属性为边框指定宽度
+ - 同样可以设置单边样式
+   - border-top-width
+
+
+
 
 
 
