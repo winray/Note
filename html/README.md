@@ -56,17 +56,20 @@ border：边框
 - **不要忘记结束标签**
 - 换行使用`<br />`
 - 浏览器会自动移除多余的空格和空行而只显示一个空格
+
 - 超链接`<a>`
  - 文字
  - 图像
  - 按钮
  - **target**属性: 定义了打开方式
  - **name**属性: 对读者不可见
+
 - 图像
  - alt属性: 为图像定义一串预备的可替换的文本
  - 加载图片需要时间，慎用图片
  - map定义图像地图
- - area定义图像地图中可点的区域
+ - area定义图像地图中可点的区域、
+
 - 表格
  - `<table>、<tr>、<td>`
  - 边框属性: `<border>`
@@ -75,6 +78,7 @@ border：边框
  - 如果表格内容为空，浏览器可能无法显示出这个单元格的边框。
    - 为了避免，使用空格占位符
  - `<caption>`: title
+
 - 列表
  - 无序
    - 始于`<ul>`标签
@@ -108,7 +112,47 @@ border：边框
  - `<span>`: 内联元素
  - 可使用网上免费开源模版来快速布局，根据需求对模版进行优化
 
+- 表单
+ - `<form>`
+ - 输入：`<input>`
+  
+   ```bash
+  <input type="text" name="input" />
+   ```
+ - 单选按钮：**radio**
+ 
+   ```bash
+   <form>
+	<input type="radio" name="sex" value="male" /> Male
+	<br />
+	<input type="radio" name="sex" value="female" /> Female
+	</form>
+   ```
+ 
+ - 复选框：**checkbox**
+ 
+   ```bash
+   <form>
+	<input type="checkbox" name="bike" />
+	I have a bike
+	<br />
+	<input type="checkbox" name="car" />
+	I have a car
+	</form>
+   ```
+ 
+ - 动作属性：**action**和确认按钮
+  
+   ```bash
+   <form name="input" action="html_form_action.asp" method="get">
+	Username:
+	<input type="text" name="user" />
+	<input type="submit" value="Submit" />
+	</form>
+   ```
 
+######html框架
+使用框架可以在浏览器中显示不止一个页面
 
 
 
