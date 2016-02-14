@@ -1,6 +1,6 @@
 ##Node For Git
 右键选择： `git bash here`
-
+参考：http://www.ruanyifeng.com/blog/2014/06/git_remote.html
 ![theory](./img/theory.jpg)
 ###心得
 有改动别忘了 `commit`
