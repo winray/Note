@@ -132,23 +132,23 @@ border：边框
  - 复选框：**checkbox**
  
    ```bash
-   <form>
-		<input type="checkbox" name="bike" />
-		I have a bike
-		<br />
-		<input type="checkbox" name="car" />
-		I have a car
-	</form>
+<form>
+	<input type="checkbox" name="bike" />
+	I have a bike
+	<br />
+	<input type="checkbox" name="car" />
+	I have a car
+</form>
    ```
  
  - 动作属性：**action**和确认按钮
   
    ```bash
-   <form name="input" action="html_form_action.asp" method="get">
-		Username:
-		<input type="text" name="user" />
-		<input type="submit" value="Submit" />
-	</form>
+<form name="input" action="html_form_action.asp" method="get">
+	Username:
+	<input type="text" name="user" />
+	<input type="submit" value="Submit" />
+</form>
    ```
 
 ######html框架 `<frameset>`
@@ -322,19 +322,130 @@ border：边框
  - 优酷解决方案
    - 在 HTML 中显示视频的最简单的方法是使用优酷等视频网站。
 
+######XHTML简介
+- XHTML 是以 XML 格式编写的 HTML。
+ - XHTML 指的是可扩展超文本标记语言
+ - XHTML 与 HTML 4.01 几乎是相同的
+ - XHTML 是更严格更纯净的 HTML 版本
+ - XHTML 是以 XML 应用的方式定义的 HTML
+ - XHTML 是 2001 年 1 月发布的 W3C 推荐标准
+ - XHTML 得到所有主流浏览器的支持
 
+- 优点
+ - XML 是一种必须正确标记且格式良好的标记语言。
+ - XHTML 元素必须正确嵌套
+ - XHTML 元素必须始终关闭
+ - XHTML 元素必须小写
+ - XHTML 文档必须有一个根元素
+ - 空元素也必须关闭
 
+- XHTML属性
+ - XHTML 属性必须使用小写
+ - XHTML 属性值必须用引号包围
+ - XHTML 属性最小化也是禁止的
 
+######HTML5简介
+- HTML5 为 HTML、 XHTML 以及 HTML DOM 的新标准。
+- 为 HTML5 建立的一些规则：
+ - 新特性应该基于 HTML、 CSS、 DOM 以及 JavaScript。
+ - 减少对外部插件的需求（ 比如 Flash）
+ - 更优秀的错误处理
+ - 更多取代脚本的标记
+ - HTML5 应该独立于设备
+ - 开发进程应对公众透明
 
+- 新特性：
+ - 用于绘画的 canvas 元素
+ - 用于媒介回放的 video 和 audio 元素
+ - 对本地离线存储的更好的支持
+ - 新的特殊内容元素， 比如 article、 footer、 header、 nav、 section
+ - 新的表单控件， 比如 calendar、 date、 time、 email、 url、 search
 
+- html5视频
+ - control 属性供添加播放、 暂停和音量控件。包含宽度和高度属性也是不错的主意。
 
+ ```bash
+<video src="movie.ogg" controls="controls">
+</video>
+ ```
 
+ - HTML5 `<video>` - 使用 DOM 进行控制
 
+- html5音频
+ - HTML5 规定了一种通过 audio 元素来包含音频的标准方法。
+ - control 属性供添加播放、 暂停和音量控件。`<audio>` 与 `</audio>` 之间插入的内容是供不支持 audio 元素的浏览器显示的：
 
+ ```bash
+ <audio src="song.ogg" controls="controls">
+ </audio>
+ ```
 
+- html5拖放
+ - 拖放（ Drag 和 drop） 是 HTML5 标准的组成部分。
+ - 设置元素可拖放：
 
+   ```bash
+   <img draggable="true" />
+   ```
 
+- html5 **Canvas**
+ - canvas 元素用于在网页上绘制图形。
+ 
+   ```bash
+<canvas id="myCanvas" width="200" height="100"></canvas>
+   ```
 
+- html5内联SVG
+ - SVG 指可伸缩矢量图形 (Scalable Vector Graphics)
+ - SVG 用于定义用于网络的基于矢量的图形
+ - SVG 使用 XML 格式定义图形
+ - SVG 图像在放大或改变尺寸的情况下其图形质量不会有损失
+ - SVG 是万维网联盟的标准
 
+- HTML5 地理定位
+ - HTML5 Geolocation（ 地理定位） 用于定位用户的位置。
+ - 在地图中显示结果，可使用经纬度的地图服务，比如谷歌地图或百度地图
 
+- HTML 5 Web 存储
+ - HTML5 提供了两种在客户端存储数据的新方法：
+   - localStorage - 没有时间限制的数据存储
+   - sessionStorage - 针对一个 session 的数据存储
 
+- HTML 5 应用程序缓存
+ - 使用 HTML5， 通过创建 cache manifest 文件， 可以轻松地创建 web 应用的离线版本。
+ - HTML5 引入了应用程序缓存， 这意味着 web 应用可进行缓存， 并可在没有因特网连接时进行访问。
+ - 离线浏览 - 用户可在应用离线时使用它们
+ - 速度 - 已缓存资源加载得更快
+ - 减少服务器负载 - 浏览器将只从服务器下载更新过或更改过的资源。
+
+- HTML 5 Web Workers
+ - web worker 是运行在后台的 JavaScript，不会影响页面的性能。
+
+- HTML5 Input类型
+ - email 类型用于应该包含 e-mail 地址的输入域。
+ 
+ ```bash
+ E-mail: <input type="email" name="user_email" />
+ ```
+ 
+ - url 类型用于应该包含 URL 地址的输入域。
+ 
+ ```bash
+ Homepage: <input type="url" name="user_url" />
+ ```
+
+ - 还有number、range、Date Pickers（ 日期选择器）、search等等。
+
+- html5 表单元素
+ - datalist 元素规定输入域的选项列表。
+ - keygen 元素的作用是提供一种验证用户的可靠方法。
+ - output 元素用于不同类型的输出， 比如计算或脚本输出：
+
+- html5表单属性
+ - form 属性：
+   - autocomplete
+   - novalidate
+ - input 属性：
+   - autocomplete
+   - autofocus
+   - height 和 width等等
