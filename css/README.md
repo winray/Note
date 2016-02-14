@@ -180,6 +180,105 @@ h4 {letter-spacing: 20px}
  - 16px=1em
 
 ######CSS链接
+- 链接的四种状态：
+ - a:link - 普通的、 未被访问的链接
+ - a:visited - 用户已访问的链接
+ - a:hover - 鼠标指针位于链接的上方
+ - a:active - 链接被点击的时刻
+
+- a:hover 必须位于 a:link 和 a:visited 之后
+
+- a:active 必须位于 a:hover 之后
+
+- 文本修饰
+ - text-decoration 属性大多用于去掉链接中的下划线：
+
+   ```bash
+   a:link {text-decoration:none;}
+   a:visited {text-decoration:none;}
+   a:hover {text-decoration:underline;}
+   a:active {text-decoration:underline;}
+   ```
+
+- 背景色
+ - background-color 属性规定链接的背景色：
+
+######CSS列表
+- 要修改用于列表项的标志类型， 可以使用属性 list-style-type：
+
+ ```bash
+ ul {list-style-type : square}
+ ```
+
+- 对各标志使用一个图像，这可以利用 list-style-image:
+
+ ```bash
+ ul li {list-style-image : url(xxx.gif)}
+ ```
+
+######CSS表格
+- 表格边框
+ -  border 属性
+
+    ```bash
+	table, th, td {
+	    border: 1px solid blue;
+	}
+	```
+
+- border-collapse 属性设置是否将表格边框折叠为单一边框：
+
+ ```bash
+ table {
+     border-collapse:collapse;
+ }
+ table,th, td {
+     border: 1px solid black;
+ }
+ ```
+
+- 表格宽度和高度
+ - 通过 width 和 height 属性定义表格的宽度和高度。
+
+- 表格文本对齐
+ - text-align 和 vertical-align 属性设置表格中文本的对齐方式。
+ - text-align 属性设置水平对齐方式， 比如左对齐、 右对齐或者居中：
+
+    ```bash
+	td {
+	    text-align: right;
+	}
+	```
+
+ - vertical-align 属性设置垂直对齐方式， 比如顶部对齐、 底部对齐或居中对齐：
+
+    ```bash
+	td {
+	    height: 50%;
+		vertical-align:bottom;
+	}
+	```
+
+- 表格内边距
+ - padding
+
+- 表格颜色
+ - color、background-color
+
+######CSS轮廓
+- 轮廓（ outline） 是绘制于元素周围的一条线， 位于边框边缘的外围， 可起到突出元素的作用。
+- CSS outline 属性规定元素轮廓的样式、 颜色和宽度。
+- outline：设置所有属性
+- outline-color：轮廓颜色
+- outline-style：轮廓样式
+- outline-width：轮廓宽度
+
+######CSS框模型
+CSS 框模型 (Box Model) 规定了元素框处理元素内容、 内边距、 边框 和 外边距的方式。
+**CSS框模型概述**
+![CSS框模型概述](./img/1.gif)
+
+
 
 
 
