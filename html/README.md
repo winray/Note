@@ -246,6 +246,82 @@ border：边框
 &nbsp;&nbsp;&nbsp;&nbsp;HTML 中的预留字符必须被替换为字符实体。如空格：`&nbsp;`
 
 ###### HTML统一资源定位器
+- URL，Uniform Resource Locator，也被称为网址
+- `scheme://host.domain:port/path/filename`
+ - scheme - 定义因特网服务的类型。 最常见的类型是 http
+ - host - 定义域主机（ http 的默认主机是 www）
+ - domain - 定义因特网域名， 比如 w3school.com.cn
+ - :port - 定义主机上的端口号（ http 的默认端口号是 80）
+ - path - 定义服务器上的路径（ 如果省略， 则文档必须位于网站的根目录中）
+ - filename - 定义文档/资源的名称
+
+- URL 只能使用 ASCII 字符集来通过因特网进行发送。
+
+######HTML Web Server
+向世界发布自己的网站，那么需要将其放到web服务器上。
+- 托管自己的网站，不建议
+- 使用因特网服务提供商(**ISP**)
+
+######HTML多媒体
+- Web 上的多媒体指的是音效、 音乐、 视频和动画。
+- 注意事项
+ - 多媒体格式
+ - 视频格式
+ - 声音格式
+ - 确定使用何种格式
+
+######HTML Object元素
+- `<object>` 的作用是支持 HTML 助手（ 插件） 。
+- 辅助程序可用于播放音频和视频(以及其他)。辅助程序是使用 `<object>` 标签来加载的。
+
+ ```bash
+ <object width="420" height="360" classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B" codebase="http://www.apple.com/qtactivex/qtplugin.cab">
+	<param name="src" value="bird.wav" />
+	<param name="controller" value="true" />
+</object>
+ ```
+
+- 下面的例子使用了两个不同的音频格式。 HTML5 `<audio>` 元素会尝试以 mp3 或ogg 来播放音频。 如果失败， 代码将回退尝试 `<embed> `元素。
+
+ ```bash
+ <audio controls="controls" height="100" width="100">
+	<source src="song.mp3" type="audio/mp3" />
+	<source src="song.ogg" type="audio/ogg" />
+	<embed height="100" width="100" src="song.mp3" />
+ </audio>
+ ```
+
+- 雅虎媒体播放器：只需简单地让雅虎来完成歌曲播放的工作就可以了。
+
+- 视频
+
+ ```bash
+ <video width="320" height="240" controls="controls">
+	<source src="movie.mp4" type="video/mp4" />
+	<source src="movie.ogg" type="video/ogg" />
+	<source src="movie.webm" type="video/webm" />
+	<object data="movie.mp4" width="320" height="240">
+		<embed src="movie.swf" width="320" height="240" />
+	</object>
+ </video>
+ ```
+
+ - **最好的解决方法：**下面使用了 4 中不同的视频格式。 HTML 5 `<video>` 元素会尝试播放以 mp4、ogg 或 webm 格式中的一种来播放视频。 如果均失败， 则回退到 `<embed>` 元素。
+
+ ```bash
+ <video width="320" height="240" controls="controls">
+	<source src="movie.mp4" type="video/mp4" />
+	<source src="movie.ogg" type="video/ogg" />
+	<source src="movie.webm" type="video/webm" />
+	<object data="movie.mp4" width="320" height="240">
+		<embed src="movie.swf" width="320" height="240" />
+	</object>
+</video>
+ ```
+
+ - 优酷解决方案
+   - 在 HTML 中显示视频的最简单的方法是使用优酷等视频网站。
+
 
 
 
