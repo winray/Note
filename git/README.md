@@ -1,4 +1,4 @@
-##Node For Git
+##Note For Git
 右键选择： `git bash here`
 参考：http://www.ruanyifeng.com/blog/2014/06/git_remote.html
 ![theory](./img/theory.jpg)
