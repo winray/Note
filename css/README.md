@@ -11,12 +11,12 @@
 
  ```bash
 <style type="text/css">
-body {
-    background-color: red
-}
-p {
-    margin-left: 20px
-}
+	body {
+		background-color: red
+	}
+	p {
+		margin-left: 20px
+	}
 </style>
  ```
 - 内联样式表
