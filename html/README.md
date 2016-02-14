@@ -86,8 +86,8 @@ border：边框
     
 	 ```bash
 	<ul>
-	<li>Coffee</li>
-	<li>Milk</li>
+		<li>Coffee</li>
+		<li>Milk</li>
 	</ul>
       ```
  - 有序
@@ -99,10 +99,10 @@ border：边框
     
 	 ```bash
 	<dl>
-	<dt>Coffee</dt>
-	<dd>Black hot drink</dd>
-	<dt>Milk</dt>
-	<dd>White cold drink</dd>
+		<dt>Coffee</dt>
+			<dd>Black hot drink</dd>
+		<dt>Milk</dt>
+			<dd>White cold drink</dd>
 	</dl>
       ```
 - `<div>、<span>`
@@ -123,9 +123,9 @@ border：边框
  
    ```bash
    <form>
-	<input type="radio" name="sex" value="male" /> Male
-	<br />
-	<input type="radio" name="sex" value="female" /> Female
+		<input type="radio" name="sex" value="male" /> Male
+		<br />
+		<input type="radio" name="sex" value="female" /> Female
 	</form>
    ```
  
@@ -133,11 +133,11 @@ border：边框
  
    ```bash
    <form>
-	<input type="checkbox" name="bike" />
-	I have a bike
-	<br />
-	<input type="checkbox" name="car" />
-	I have a car
+		<input type="checkbox" name="bike" />
+		I have a bike
+		<br />
+		<input type="checkbox" name="car" />
+		I have a car
 	</form>
    ```
  
@@ -145,9 +145,9 @@ border：边框
   
    ```bash
    <form name="input" action="html_form_action.asp" method="get">
-	Username:
-	<input type="text" name="user" />
-	<input type="submit" value="Submit" />
+		Username:
+		<input type="text" name="user" />
+		<input type="submit" value="Submit" />
 	</form>
    ```
 
@@ -157,9 +157,9 @@ border：边框
 
  ```bash
 <frameset cols="25%,50%,25%">
-<frame src="/example/html/frame_a.html">
-<frame src="/example/html/frame_b.html">
-<frame src="/example/html/frame_c.html">
+	<frame src="/example/html/frame_a.html">
+	<frame src="/example/html/frame_b.html">
+	<frame src="/example/html/frame_c.html">
 </frameset>
  ```
 
