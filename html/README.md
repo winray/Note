@@ -204,7 +204,49 @@ border：边框
 网页链接：http://www.w3school.com.cn/html/html_quick.asp
 
 ######html高级
-`<!DOCTYPE>`声明，表示为最新的html5文档类型。
+`<!DOCTYPE html>`声明，表示为最新的html5文档类型。
+
+######head元素
+- title: 文档标题
+- base：为页面上所有链接规定默认地址或默认目标
+
+ ```bash
+ <base href="http://www.w3school.com.cn/images/" />
+ <base target="_blank" />
+ ```
+
+- link: 定义文档与外部资源之间的关系，最常用于谅解样式表：
+
+ ```bash
+ <link rel="stylesheet" type="text/css" href="mystyle.css" />
+ ```
+
+- style: 可以在style元素内规定html元素在浏览器中呈现的样式：
+
+ ```bash
+ <head>
+	<style type="text/css">
+	body {background-color:yellow}
+	p {color:blue}
+	</style>
+</head>
+ ```
+
+- meta: metadata(元数据)
+ - name 和 content 属性的作用是描述页面的内容。针对搜索引擎的关键词。
+
+ ```bash
+ <meta name="keywords" content="HTML, CSS, XML" />
+ ```
+
+- script：用于定义客户端脚本，比如javascrip。
+ - JavaScript 使 HTML 页面具有更强的动态和交互性。
+
+###### 字符实体
+&nbsp;&nbsp;&nbsp;&nbsp;HTML 中的预留字符必须被替换为字符实体。如空格：`&nbsp;`
+
+###### HTML统一资源定位器
+
 
 
 
