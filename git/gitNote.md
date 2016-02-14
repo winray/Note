@@ -1,5 +1,7 @@
 ##Node For Git
 右键选择： `git bash here`
+
+![theory](./img/theory.jpg)
 ###心得
 有改动别忘了 `commit`
 ######首先，初始化
