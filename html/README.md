@@ -151,14 +151,60 @@ border：边框
 	</form>
    ```
 
-######html框架
+######html框架 `<frameset>`
 使用框架可以在浏览器中显示不止一个页面
+- 垂直框架
 
+ ```bash
+<frameset cols="25%,50%,25%">
+<frame src="/example/html/frame_a.html">
+<frame src="/example/html/frame_b.html">
+<frame src="/example/html/frame_c.html">
+</frameset>
+ ```
 
+- 水平框架
 
+ ```bash
+<frameset rows="25%,50%,25%">
+	<frame src="/example/html/frame_a.html">
+	<frame src="/example/html/frame_b.html">
+	<frame src="/example/html/frame_c.html">
+</frameset>
+ ```
 
+- 混合框架
 
+ ```bash
+<frameset rows="25%,50%"> 
+	<frame src="/example/html/frame_a.html">
+	<frameset rows="25%,50%,25%">
+		<frame src="/example/html/frame_b.html">
+		<frame src="/example/html/frame_c.html">
+		<frame src="/example/html/frame_d.html">
+	</frameset>
+</frameset>
+ ```
 
+- 内联框架 `<iframe>`
+ - **height、width**设置高、宽
+ - `frameborder="0"`移除边框
+ - 可用作链接的目标(**target**)
+
+######html背景
+好的背景让站点加分
+- 颜色
+ - `bgcolor="FFFFFF"`
+ - 大多数浏览器支持颜色名集合
+- 图像
+ - 属性值为图像的url，若图像小于浏览器尺寸，图像将在整个浏览器窗口进行复制
+ - `<body background="1.jpg">`
+
+######html4.01快速参考
+网页链接：http://www.w3school.com.cn/html/html_quick.asp
+
+######html高级
+`<!DOCTYPE>`声明，表示为最新的html5文档类型。
 
 
 
