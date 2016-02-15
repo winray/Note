@@ -26,6 +26,7 @@
 - Blog
 
  - 使用github搭建博客
+ - 使用Jekyll模版
 
 
 

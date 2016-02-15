@@ -49,14 +49,17 @@ git checkout fz
 ```bash
 git push origin --delete <branchName>
 ```
+
 ######删除
 ```bash
 删除文件夹：git rm -rf dir
 删除文件：git rm file
 ```
+
 ######修改项目名
 ```bash
 在Github页面中，进入要修改的仓库，在页面上方选择“Settings”，即可重命名远程仓库。
 本地仓库删除远程仓库："git remote rm origin"
 然后按照之前的方法添加新的远程仓库
 ```
+
