@@ -548,20 +548,340 @@ example：
 
 ######CSS水平对齐
 - 对齐块元素
+ - 块元素指的是占据全部可用宽度的元素， 并且在其前后都会换行。
+
+- 使用 margin 属性来水平对齐
+
+ - 可通过将左和右外边距设置为 "auto"， 来对齐块元素。
+
+- 使用 position 属性进行左和右对齐
+
+- 使用 float 属性来进行左和右对齐
+
+
+######CSS 尺寸
+- CSS 尺寸 (Dimension) 属性允许你控制元素的高度和宽度。 同样， 它允许你增加行间距。
+- 使用像素值设置图像
+- 使用百分比设置图像
+- 使用像素值来设置元素
+- 使用百分比来设置元素
+- 设置元素的最大高度
+- 使用像素值来设置元素的最大宽度
+- 使用百分比来设置元素的最大宽度
+
+######CSS 分类
+- CSS 分类属性允许你规定如何以及在何处显示元素。
+
+- CSS 分类属性允许你控制如何显示元素， 设置图像显示于另一元素中的何处， 相对于其正常位置来定位元素， 使用绝对值来定位元素， 以及元素的可见度。
+
+
+######CSS 导航条
+- 拥有易用的导航条对于任何网站都很重要。
+ - 通过 CSS， 您能够把乏味的 HTML 菜单转换为漂亮的导航栏。
+
+- 导航栏 = 链接列表
+ - 导航栏基本上是一个链接列表， 因此使用 `<ul>` 和 `<li>` 元素是非常合适的
+
+ - 从列表中去掉圆点和外边距：
+
+    ```bash
+	ul {
+		list-style-type:none;
+		margin:0;
+		padding:0;
+	}
+	```
+
+ - 如需构建垂直导航栏， 我们只需要定义 `<a>` 元素的样式
+
+    ```bash
+	a{
+		display:block;
+		width:60px;
+	}
+	```
+
+ - display:block - 把链接显示为块元素可使整个链接区域可点击（ 不仅仅是文本） ， 同时也允许我们规定宽度。
+ - width:60px - 块元素默认占用全部可用宽度。 我们需要规定 60 像素的宽度。
+
+ - 水平导航栏
+   - 使用行内或浮动列表项
+   - 如果您希望链接拥有相同的尺寸， 就必须使用浮动方法
+
+ - 除了上面的“标准”代码， 构建水平导航栏的方法之一是将 `<li>` 元素规定为行内元素：
+
+    ```bash
+	li {
+		display:inline;
+    }
+	```
+
+ - display:inline; - 默认地， `<li>` 元素是块元素。 在这里， 我们去除了每个列表项前后的换行， 以便让它们在一行中显示。
+
+ - 对列表项进行浮动,为了让所有链接拥有相等的宽度， 浮动 `<li>` 元素并规定` <a>` 元素的宽度：
+
+    ```bash
+	li {
+		float:left;
+	}
+	a {
+		display:block;
+		width:60px;
+	}
+	```
+
+######CSS图片库
+CSS 可用来创建图片库。
+
+- 通过 CSS 创建透明图像是很容易的。
+ - opacity属性
+
+
+######CSS2 媒介类型
+媒介类型(Media Types)允许你定义以何种媒介来提交文档。 文档可以被显示在显示器、 纸媒介或者听觉浏览器等等。
+- **媒介类型**
+
+ - 某些 CSS 属性仅仅被设计为针对某些媒介。 比方说 "voice-family" 属性被设计为针对听觉用户终端。 其他的属性可被用于不同的媒介。 例如， "font-size" 属性可被用于显示器以及印刷媒介， 但是也许会带有不同的值。 显示器上面的显示的文档通常会需要比纸媒介文档更大的字号， 同时， 在显示器上， sans-serif 字体更易阅读而在纸媒介上， serif 字体更易阅读。
+
+- @media规则
+
+ - @media 规则使你有能力在相同的样式表中， 使用不同的样式规则来针对不同的媒介。
+
+ - 下面这个例子中的样式告知浏览器在显示器上显示 14 像素的 Verdana 字体。 但是假如页面需要被打印， 将使用 10 个像素的 Times 字体。 注意：font-weight 被设置为粗体， 不论显示器还是纸媒介：
+
+    ```bash
+	<style>
+    @media screen {
+        p .test {
+            font-family: verdana, sans-serif;
+            font-size: 14px;
+        }
+    }
+    
+    @media print {
+        p .test {
+            font-family: times, serif;
+            font-size: 10px;
+        }
+    }
+    
+    @media screen, print {
+        p .test {
+            font-weight: bold;
+        }
+    }
+    < /style>
+	```
+
+ - 媒介类型名称对大小写不敏感。
+
+ - 不同媒介类型
+
+ ![media](./img/5.png)
 
 
 
+######CSS注意事项
+- Internet Explorer Behaviors
+- Typewriter Simulation
 
 
+######CSS3 简介
+CSS3 被划分为模块。
+- 其中最重要的 CSS3 模块包括：
+
+ - 选择器
+ - 框模型
+ - 背景和边框
+ - 文本效果
+ - 2D/3D 转换
+ - 动画
+ - 多列布局
+ - 用户界面
 
 
+######CSS3 边框
+- 通过 CSS3， 您能够创建圆角边框， 向矩形添加阴影， 使用图片来绘制边框 - 并且不需使用设计软件， 比如 PhotoShop。
+
+- CSS3 圆角边框
+
+ - border-radius 属性用于创建圆角：`border-radius:25px;`
+
+- CSS3 边框阴影
+
+ - box-shadow 用于向方框添加阴影：
+
+- CSS3 边框图片
+
+ - 通过 CSS3 的 border-image 属性
 
 
+######CSS3 背景
+- CSS3 background-size 属性
+
+ - 规定背景图片的尺寸
+
+- CSS3 background-origin 属性
+
+ - 规定背景图片的定位区域
+ - 背景图片可以放置于 content-box、 padding-box 或 border-box 区域。
+
+   ![image](./img/6.png)
+
+   `background-origin:content-box;`
 
 
+- CSS3 多重背景图片
+ - `background-image:url(a.gif),url(b.gif);`
 
 
+######CSS3 文本效果
+- CSS3 文本阴影
+
+ - ext-shadow 可向文本应用阴影
+
+- CSS3 自动换行
+
+ - 允许对长单词进行拆分， 并换行到下一行：`p {word-wrap:break-word;}`
 
 
+######CSS3 字体
+- CSS3 @font-face 规则
 
+ - 在 CSS3 之前， web 设计师必须使用已在用户计算机上安装好的字体。
+ - 通过 CSS3， web 设计师可以使用他们喜欢的任意字体。
+ - 当您您找到或购买到希望使用的字体时， 可将该字体文件存放到 web 服务器上， 它会在需要时被自动下载到用户的计算机上。
+ - 您“自己的”的字体是在 CSS3 @font-face 规则中定义的。
+
+ - **在新的 @font-face 规则中， 您必须首先定义字体的名称（ 比如 myFirstFont），然后指向该字体文件。如需为 HTML 元素使用字体， 请通过 font-family 属性来引用字体的名称(myFirstFont)：**
+
+   ```bash
+ @font-face {
+	 font-family: myFirstFont;
+	 src:url('Sansation_Light.ttf'),
+	 url('Sansation_Light.eot'); /* IE9+ */
+ }
+ div {
+ 	font-family:myFirstFont;
+ }
+   ```
+
+- 使用粗体字体
+ - 您必须为粗体文本添加另一个包含描述符的 @font-face：
+
+   ```bash
+   @font-face {
+        font-family: myFirstFont;
+	    src:url('Sansation_Bold.ttf'),
+	    url('Sansation_Bold.eot'); /* IE9+ */
+	    font-weight:bold;
+	}
+   ```
+
+######CSS3 2D转换
+- 通过 CSS3 转换， 我们能够对元素进行移动、 缩放、 转动、 拉长或拉伸。
+- translate() 方法
+ - 元素从其当前位置移动， 根据给定的 left（ x 坐标） 和top（ y 坐标） 位置参数：
+- rotate() 方法
+
+ - 元素顺时针旋转给定的角度。 允许负值， 元素将逆时针旋转
+
+- scale() 方法
+
+ - 元素的尺寸会增加或减少， 根据给定的宽度（ X 轴） 和高度（ Y轴） 参数：
+
+- skew() 方法
+
+ - 元素翻转给定的角度， 根据给定的水平线（ X 轴） 和垂直线（ Y轴） 参数
+
+- matrix() 方法
+
+ - matrix() 方法把所有 2D 转换方法组合在一起。
+ - matrix() 方法需要六个参数， 包含数学函数， 允许您：旋转、 缩放、 移动以及倾斜元素。
+
+######CSS3 3D转换
+- CSS3 允许您使用 3D 转换来对元素进行格式化。
+
+- rotateX() 方法
+
+ - 元素围绕其 X 轴以给定的度数进行旋转
+
+- rotateY() 旋转
+
+ - 元素围绕其 Y 轴以给定的度数进行旋转。
+
+
+######CSS3 过度
+通过 CSS3， 我们可以在不使用 Flash 动画或 JavaScript 的情况下， 当元素从一种样式变换为另一种样式时为元素添加效果。
+- **transition**
+ - `transition: width 2s;`
+
+
+######CSS3 动画
+通过 CSS3， 我们能够创建动画， 这可以在许多网页中取代动画图片、 Flash 动画以及 JavaScript。
+
+- CSS3 @keyframes 规则
+
+ - @keyframes 规则用于创建动画。 在 @keyframes 中规定某项 CSS 样式， 就能创建由当前样式逐渐改为新样式的动画效果。
+
+    ```bash
+	@keyframes myfirst {
+		from {background: red;}
+		to {background: yellow;}
+	}
+	```
+
+ - 通过规定至少以下两项 CSS3 动画属性， 即可将动画绑定到选择器：
+   - 规定动画的名称
+   - 规定动画的时长
+
+    ```bash
+	@keyframes myfirst {
+        0 % {
+            background: red;
+        }
+        25% {
+            background: yellow;
+        }
+        50% {
+            background: blue;
+        }
+        100% {
+            background: green;
+        }
+    }
+	```
+
+######CSS3多列
+通过 CSS3， 您能够创建多个列来对文本进行布局 - 就像报纸那样！
+- CSS3 创建多列
+
+ - column-count 属性规定元素应该被分隔的列数：
+
+- CSS3 规定列之间的间隔
+
+ - column-gap 属性规定列之间的间隔：
+
+- CSS3 列规则
+
+ - column-rule 属性设置列之间的宽度、 样式和颜色规则。
+
+   ```bash
+   column-rule:3px outset #ff0000;
+   ```
+
+######CSS3用户界面
+在 CSS3 中， 新的用户界面特性包括重设元素尺寸、 盒尺寸以及轮廓等。
+
+- CSS3 Resizing
+
+ - resize 属性规定是否可由用户调整元素尺寸。
+
+- CSS3 Box Sizing
+
+ - box-sizing 属性允许您以确切的方式定义适应某个区域的具体内容。
+
+- CSS3 Outline Offset
+
+ - outline-offset 属性对轮廓进行偏移， 并在超出边框边缘的位置绘制轮廓。
 
