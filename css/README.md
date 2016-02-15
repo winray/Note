@@ -526,10 +526,28 @@ example：
 
 
 ######CSS 相邻兄弟选择器
+- 相邻兄弟选择器（ Adjacent sibling selector） 可选择紧接在另一元素后的元素，且二者有相同父元素。
+- example：如果要增加紧接在 h1 元素后出现的段落的上边距， 可以这样写：
+
+ ```bash
+ h1 + p {margin-top:50px;}
+ ```
+
+ - 选择紧接在 h1 元素后出现的段落， h1 和 p 元素拥有共同的父元素;
 
 
+######CSS伪类`Pseudo-classes`
+- CSS 伪类用于向某些选择器添加特殊的效果。
+
+- 伪类可以与 CSS 类配合使用：`a.red : visited {color: #FF0000}`
+
+- 伪元素的语法：`selector:pseudo-element {property:value;}`
+
+- 可以结合多个伪元素来使用.
 
 
+######CSS水平对齐
+- 对齐块元素
 
 
 
