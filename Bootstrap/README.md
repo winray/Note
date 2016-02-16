@@ -507,23 +507,199 @@ Bootstrap 进度条使用 CSS3 过渡和动画来获得该效果。
  - 可以堆叠多个进度条。 把多个进度条放在相同的 .progress 中即可实现堆叠
 
 ######Bootstrap 多媒体对象（Media Object）
+- 这些抽象的对象样式用于创建各种类型的组件（ 比如：博客评论） ， 我们可以在组件中使用图文混排， 图像可以左对齐或者右对齐。 媒体对象可以用更少的代码来实现媒体对象与文字的混排。
+
+- 媒体对象轻量标记、 易于扩展的特性是通过向简单的标记应用 class 来实现的。 你可以在 HTML 标签中添加以下两种形式来设置媒体对象：
+
+ - .media：该 class 允许将媒体对象里的多媒体（ 图像、 视频、 音频） 浮动到内容区块的左边或者右边。
+ - .media-list：如果你需要一个列表， 各项内容是无序列表的一部分， 可以使用该 class。 可用于评论列表与文章列表。
 
 
+######Bootstrap 列表组
+- 列表组件用于以列表形式呈现复杂的和自定义的内容。 创建一个基本的列表组的步骤如下：
+
+ - 向元素` <ul> `添加 class .list-group。
+ - 向 `<li>` 添加 class .list-group-item。
+
+- 向列表组添加徽章
+
+ - 可以向任意的列表项添加徽章组件， 它会自动定位到右边。 只需要在` <li>` 元素中添加 `<span class="badge">` 即可。 
+
+- 向列表组添加链接
+ - 通过使用锚标签代替列表项， 我们可以向列表组添加链接。 我们需要使用 `<div>` 代替 `<ul>` 元素。 
+
+- 向列表组添加自定义内容
+
+ - 可以向上面已添加链接的列表组添加任意的 HTML 内容。
 
 
+######Bootstrap 面板（Panels）
+- 面板组件用于把 DOM 组件插入到一个盒子中。 创建一个基本的面板， 只需要向 `<div>` 元素添加 class .panel 和 class.panel-default 即可
+
+- 可以通过以下两种方式来添加面板标题：
+
+ - 使用 .panel-heading class 可以很简单地向面板添加标题容器。
+ - 使用带有 .panel-title class 的 `<h1>~~<h6>` 来添加预定义样式的标题。
+
+- 可以在面板中添加脚注， 只需要把按钮或者副文本放在带有 class .panelfooter 的 `<div>` 中即可。
+
+- 使用语境状态类 panel-primary、 panel-success、 panel-info、 panel-warning、panel-danger， 来设置带语境色彩的面板
+
+- 为了在面板中创建一个无边框的表格， 我们可以在面板中使用 class .table。 假设有个` <div> `包含 .panel-body， 我们可以向表格的顶部添加额外的边框用来分隔。如果没有包含 .panel-body 的` <div>`， 则组件会无中断地从面板头部移动到表格。
+
+- 可以在任何面板中包含列表组， 通过在 `<div>` 元素中添加 .panel 和 .paneldefault 类来创建面板， 并在面板中添加列表组。 
 
 
+######Bootstrap Wells
+- Well 是一种会引起内容凹陷显示或插图效果的容器` <div>`。 为了创建 Well， 只需要简单地把内容放在带有 class .well 的 `<div> `中即可。 
+
+- 可以使用可选的 class well-lg or well-lg 来改变 Well 的尺寸大小。 这两个类是与.well 类结合使用的。 这两个类会影响内边距（ padding） ， 根据使用的类， Well 会显示得更大或者更小。
 
 
+##Bootstrap 插件
+- 所有的插件依赖于 jQuery。 所以必须在插件文件之前引用 jQuery。 
+
+######data属性
+- 你可以仅仅通过 data 属性 API 就能使用所有的 Bootstrap 插件， 无需写一行JavaScript 代码。 这是 Bootstrap 中的一等 API， 也应该是你的首选方式。
+- 话又说回来， 在某些情况下可能需要将此功能关闭。 因此， 我们还提供了关闭data 属性 API 的方法， 即解除以 data-api 为命名空间并绑定在文档上的事件。 就像下面这样：`$(document).off('.data-api')`
+- 如需关闭一个特定的插件， 只需要在 data-api 命名空间前加上该插件的名称作为命名空间即可， 如下所示：
+ `$(document).off('.alert.data-api')`
+
+######Bootstrap 过渡效果（Transition） 插件
+- 过渡效果（ Transition） 插件的使用案例：
+
+ - 具有幻灯片或淡入效果的模态对话框。
+ - 具有淡出效果的标签页。
+ - 具有淡出效果的警告框。 
+ - 具有幻灯片效果的轮播板。
+
+######Bootstrap 模态框（Modal） 插件
+- 模态框（ Modal） 是覆盖在父窗体上的子窗体。 通常， 目的是显示来自一个单独的源的内容， 可以在不离开父窗体的情况下有一些互动。子窗体可提供信息、 交互等。
+
+- 可以切换模态框（ Modal） 插件的隐藏内容：
+
+ - 通过 data 属性：在控制器元素（ 比如按钮或者链接） 上设置属性 datatoggle="modal"， 同时设置 data-target="#identifier" 或 href="#identifier"来指定要切换的特定的模态框（ 带有 id="identifier"） 。
+ - 通过 JavaScript：使用这种技术， 您可以通过简单的一行 JavaScript 来调用带有 id="identifier" 的模态框：
+  `$('#identifier').modal(options)`
 
 
+######Bootstrap下拉菜单（Dropdown） 插件
+使用下拉菜单（ Dropdown） 插件， 您可以向任何组件（比如导航栏、 标签页、 胶囊式导航菜单、 按钮等） 添加下拉菜单。
+- 通过 data 属性：向链接或按钮添加 data-toggle="dropdown" 来切换下拉菜单
+- 通过 JavaScript：通过 JavaScript 调用下拉菜单切换， 请使用下面的方法：
+
+ `$('.dropdown-toggle').dropdown()`
 
 
+######Bootstrap 滚动监听（Scrollspy） 插件
+- 滚动监听（ Scrollspy） 插件， 即自动更新导航插件， 会根据滚动条的位置自动更新对应的导航目标。 其基本的实现是随着您的滚动， 基于滚动条的位置向导航栏添加.active class。
+
+- 可以向顶部导航添加滚动监听行为：
+
+ - 通过 data 属性：向您想要监听的元素（ 通常是 body） 添加 `dataspy="scroll"`。 然后添加带有 Bootstrap .nav 组件的父元素的 ID 或 class 的属性 data-target。 为了它能正常工作， 您必须确保页面主体中有匹配您所要监听链接的 ID 的元素存在。
+ - 通过 JavaScript：您可以通过 JavaScript 调用滚动监听， 选取要监听的元素， 然后调用 .scrollspy() 函数：
+
+    `$('body').scrollspy({ target: '.navbar-example'})`
 
 
+######Bootstrap 标签页（Tab） 插件
+- 可以通过以下两种方式启用标签页：
+
+ - 通过 data 属性：您需要添加 `data-toggle="tab"` 或 `data-toggle="pill"` 到锚文本链接中。添加 nav 和 nav-tabs 类到 ul 中， 将会应用 Bootstrap 标签样式， 添加 nav和 nav-pills 类到 ul 中， 将会应用 Bootstrap 胶囊式样式。
+ - 通过 JavaScript：您可以使用 Javscript 来启用标签页， 如下所示：
+
+   ```bash
+   $('#myTab a').click(function (e) {
+		e.preventDefault()
+		$(this).tab('show')
+	})
+   ```
+
+######Bootstrap 工具提示（Tooltip）插件
+- 工具提示（Tooltip） 插件根据需求生成内容和标记， 默认情况下是把工具提示（tooltip） 放在它们的触发元素后面。 您可以有以下两种方式添加工具提示（tooltip）：
+
+ - 通过 data 属性：如需添加一个工具提示（ tooltip） ， 只需向一个锚标签添加`data-toggle="tooltip"` 即可。 锚的 title 即为工具提示（ tooltip） 的文本。 默认情况下， 插件把工具提示（ tooltip） 设置在顶部。
+ - 通过 JavaScript：通过 JavaScript 触发工具提示（ tooltip） ：
+
+   `$('#identifier').tooltip(options)`
 
 
+######Bootstrap 弹出框（Popover）插件
+- 弹出框（ Popover） 与工具提示（ Tooltip） 类似， 提供了一个扩展的视图。 如需激活弹出框， 用户只需把鼠标悬停在元素上即可。 弹出框的内容完全可使用Bootstrap 数据 API（ Bootstrap Data API） 来填充。 该方法依赖于工具提示（tooltip）。
+- 弹出框（ Popover） 插件根据需求生成内容和标记， 默认情况下是把弹出框（ popover） 放在它们的触发元素后面。 您可以有以下两种方式添加弹出框（ popover） ：
 
+ - 通过 data 属性：如需添加一个弹出框（ popover） ， 只需向一个锚/按钮标签添加 `data-toggle="popover" `即可。 锚的 title 即为弹出框（ popover） 的文本。 默认情况下， 插件把弹出框（ popover） 设置在顶部。
+ - 通过 JavaScript：通过 JavaScript 启用弹出框（ popover ：
+
+   `$('#identifier').popover(options)`
+
+
+######Bootstrap 警告框（Alert）插件
+- 警告框（ Alert） 消息大多是用来想终端用户显示诸如警告或确认消息的信息。 使用警告框（ Alert） 插件， 您可以向所有的警告框消息添加可取消（ dismiss） 功能。
+- 您可以有以下两种方式启用警告框的可取消（ dismissal） 功能：
+
+ - 通过 data 属性：通过数据 API（ Data API） 添加可取消功能， 只需要向关闭按钮添加 `data-dismiss="alert"`， 就会自动为警告框添加关闭功能。
+ - 通过 JavaScript：通过 JavaScript 添加可取消功能：
+
+    `$(".alert").alert()`
+
+
+######Bootstrap 按钮（Button） 插件
+- 按钮（Button） 在 Bootstrap 按钮 一章中介绍过。 通过按钮（Button） 插件， 您可以添加进一些交互， 比如控制按钮状态， 或者为其他组件（如工具栏） 创建按钮组。
+- 加载状态
+
+ - 如需向按钮添加加载状态， 只需要简单地向 button 元素添加` data-loadingtext="Loading..."` 作为其属性即可
+
+- 单个切换
+
+ - 如需激活单个按钮的切换（ 即改变按钮的正常状态为按压状态， 反之亦然） ， 只需向 button 元素添加 `data-toggle="button"` 作为其属性即可
+
+- 复选框（Checkbox）
+
+ - 可以创建复选框组， 并通过向 btn-group 添加 data 属性 `datatoggle="buttons" `来添加复选框组的切换。
+
+
+- 单选按钮（Radio）
+
+ - 类似地， 您可以创建单选按钮组， 并通过向 btn-group 添加 data 属性` datatoggle="buttons"` 来添加单选按钮组的切换。
+
+######Bootstrap 折叠（Collapse）插件
+- 折叠（Collapse） 插件可以很容易地让页面区域折叠起来。 无论您用它来创建折叠导航还是内容面板， 它都允许很多内容选项。
+- 可以使用折叠（Collapse） 插件：
+
+ - 创建可折叠的分组或折叠面板（accordion）
+ - `data-toggle="collapse"` 添加到您想要展开或折叠的组件的链接上。
+ - href 或 data-target 属性添加到父组件， 它的值是子组件的 id。
+ - data-parent属性把折叠面板（ accordion）的 id 添加到要展开或折叠的组件的链接上。
+
+
+######Bootstrap 轮播（Carousel）插件
+- Bootstrap 轮播（ Carousel） 插件是一种灵活的响应式的向站点添加滑块的方式。除此之外， 内容也是足够灵活的， 可以是图像、 内嵌框架、 视频或者其他您想要放置的任何类型的内容。
+
+######Bootstrap 附加导航（Affix）插件
+- 附加导航（ Affix） 插件允许某个 `<div>` 固定在页面的某个位置。 您也可以在打开或关闭使用该插件之间进行切换。 一个常见的例子是社交图标。 它们将在某个位置开始， 但当页面点击某个标记， 该 `<div>` 会锁定在某个位置， 不会随着页面其他部分一起滚动。
+
+- 可以通过 data 属性或者通过 JavaScript 来使用附加导航（Affix） 插件:
+ - 通过 data 属性：如需向元素添加附加导航（ Affix） 行为， 只需要向需要监听的元素添加 `data-spy="affix" `即可。 请使用偏移来定义何时切换元素的锁定和移动。
+ - 通过 JavaScript：您可以通过 JavaScript 手动为某个元素添加附加导航（ Affix） ， 如下所示：
+
+    ```bash
+	$('#myAffix').affix({
+		offset: {
+			top: 100, bottom: function () {
+				return (this.bottom =
+				$('.bs-footer').outerHeight(true))
+			}
+		}
+	})
+	```
+
+- 通过 CSS 定位
+
+ - 在上面两种使用附加导航（ Affix） 插件的方式中， 您都必须通过 CSS 定位内容。附加导航（ Affix） 插件在三种 class 之间切换， 每种 class 都呈现了特定的状态：.affix、 .affix-top 和 .affix-bottom。 请按照下面的步骤， 来为这三种状态设置您自己的 CSS（ 不依赖此插件） 。
+   - 在开始时， 插件添加 .affix-top 来指示元素在它的最顶端位置。 这个时候不需要任何的 CSS 定位。
+   - 当滚动经过添加了附加导航（ Affix） 的元素时， 应触发实际的附加导航（ Affix） 。 此时 .affix 会替代 .affix-top， 同时设置 position: fixed;（ 由Bootstrap 的 CSS 代码提供）。
+   - 如果定义了底部偏移， 当滚动到达该位置时， 应把 .affix 替换为 .affixbottom。 由于偏移是可选的， 假如设置了该偏移， 则要求同时设置适当的CSS。 在这种情况下， 请在必要的时候添加 position: absolute;
 
 
 
