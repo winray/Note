@@ -373,7 +373,13 @@
 	- 软件测试
 	- 数据挖掘
 
-
+######2016.6.1
+- 学习
+	- Java
+		- SpringMVC
+		- Hibernate
+		- gearman
+		- Quartz
 
 
 
